@@ -1,0 +1,708 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Noto Serif JP", serif;
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+li {
+	list-style: none;
+}
+
+/* ヘッダー */
+
+@keyframes fall {
+	from {
+		opacity: 0;
+	}
+
+	80% {
+		opacity: 0.8;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.fade-In-effect {
+	opacity: 0;
+}
+
+.fade-In-effect.is-animated {
+	animation: fall 2s linear forwards;
+}
+
+header {
+	height: 100vh;
+	text-shadow: 0px 0px 5px #000;
+}
+
+#navArea {
+	display: grid;
+	grid-template-columns: 10% 1fr 1fr 10%;
+	align-items: center;
+	color: #fff;
+	min-height: 10vh;
+}
+
+#logo {
+	grid-column: 2/2;
+	font-size: 24px;
+	z-index: 10;
+}
+
+nav {
+	z-index: 10;
+}
+
+.menu {
+	justify-self: end;
+}
+
+.menu ul {
+	display: flex;
+	justify-content: space-evenly;
+	font-weight: 600;
+}
+
+.burger {
+	grid-column: 3/3;
+	display: none;
+	margin-left: 100px;
+	cursor: pointer;
+	z-index: 100;
+	filter: drop-shadow(0px 0px 3px #000);
+}
+
+@keyframes navLinksFade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}
+
+.burger div {
+	width: 25px;
+	height: 2px;
+	background-color: #fff;
+	border-radius: 4px;
+	margin: 5px;
+}
+
+.nav-active {
+	transform: translateX(0%) !important;
+	width: 80%;
+	opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	nav {
+		position: absolute;
+		top: 8vh;
+		right: 0;
+		height: 92vh;
+		background-color: #3a4e73;
+		width: 0;
+		transform: translateX(100%);
+		transition: all 0.5s ease-in-out;
+		overflow: hidden;
+	}
+
+	.menu {
+		height: 100%;
+		top: 50%;
+	}
+
+	.menu ul {
+		height: 100%;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.menu ul li {
+		width: 80%;
+		font-size: 1.5rem;
+		align-items: center;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #fff;
+	}
+
+	.burger {
+		display: block;
+	}
+}
+
+.slider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to left, #aaa, #fff);
+	z-index: -1;
+}
+
+section {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.hero {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.hero img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.hero::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #ddd;
+	width: 100%;
+	height: 100vh;
+	opacity: 0.4;
+}
+
+.headline {
+	display: block;
+	position: absolute;
+	top: 70%;
+	color: #fff;
+	font-size: 100px;
+	padding-left: 50px;
+	overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+	.headline {
+		font-size: 2rem;
+		padding-left: 0;
+		top: 60%;
+	}
+}
+
+/* メイン */
+.contents {
+	align-items: center;
+	text-align: center;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.contents h2 {
+	font-size: 3rem;
+}
+.contents h3 {
+	font-size: 1.5rem;
+	color: #000;
+}
+
+.contents p {
+	margin: 30px 0;
+	font-weight: 600;
+}
+
+/* サービス */
+
+#contents-about {
+	margin: 10vh auto;
+}
+
+@media screen and (max-width: 768px) {
+	#contents-about p {
+		font-size: 0.9rem;
+		line-height: 2.5;
+	}
+}
+
+#services {
+	width: 90%;
+	margin: auto;
+	/* margin-bottom: 30vh; */
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1em;
+	padding: 1em;
+}
+
+@media screen and (max-width: 768px) {
+	#services {
+		width: 100%;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.card {
+	position: relative;
+	overflow: hidden;
+	margin-left: 30px;
+	margin-right: 30px;
+	padding: 30px 0px;
+	border-radius: 10px;
+	background-color: #3a4e73;
+	box-shadow: 0px 0px 5px #eee;
+}
+
+@media screen and (max-width: 768px) {
+	.card {
+		margin: 0;
+		padding: 10px 0;
+	}
+}
+
+/* カード交際エフェクト */
+.card:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -70%;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 0.3) 100%
+	);
+	transform: skewX(-25deg);
+}
+
+.card:hover::before {
+	animation: shine 0.7s;
+}
+
+@keyframes shine {
+	100% {
+		left: 100%;
+	}
+}
+
+.card img {
+	width: 30%;
+	transition: all ease-in-out 0.2s;
+}
+
+.card:hover img {
+	transform: scale(1.2);
+}
+.card h4 {
+	padding-top: 20px;
+	font-size: 1.2rem;
+	color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+	.card h4 {
+		font-size: 0.8rem;
+		padding-top: 10px;
+	}
+}
+
+/* 会社の思い */
+.detail {
+	display: flex;
+	width: 100%;
+	margin: 30vh auto;
+	justify-content: space-around;
+	align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+	.detail {
+		margin: 30px auto;
+	}
+}
+
+.detail img {
+	width: 200%;
+}
+
+.detail-image {
+	position: relative;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.detail-image::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	box-shadow: inset 0 0 10px 15px #fff;
+}
+
+.detail-text {
+	display: flex;
+	width: 50%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
+
+.detail-text p {
+	writing-mode: vertical-rl;
+	line-height: 5rem;
+	font-size: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+	.detail-text p {
+		line-height: 3rem;
+		font-size: 1rem;
+	}
+}
+
+/* フォーム */
+#Form {
+	align-items: center;
+	text-align: center;
+	margin: 20vh auto;
+	max-width: 720px;
+}
+
+@media screen and (max-width: 768px) {
+	#Form {
+		width: 100%;
+		margin: 10vh auto;
+	}
+}
+
+#Form h2 {
+	font-size: 3rem;
+}
+#Form h3 {
+	font-size: 1.5rem;
+	color: #000;
+	margin-bottom: 5vh;
+}
+
+.Form-Item {
+	border-top: 1px solid #ddd;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+@media screen and (max-width: 768px) {
+	.Form-Item {
+		padding-left: 14px;
+		padding-right: 14px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		flex-wrap: wrap;
+	}
+}
+.Form-Item:nth-child(5) {
+	border-bottom: 1px solid #ddd;
+}
+.Form-Item-Label {
+	width: 100%;
+	max-width: 248px;
+	letter-spacing: 0.05em;
+	font-weight: bold;
+	font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+	.Form-Item-Label {
+		max-width: inherit;
+		display: flex;
+		align-items: center;
+		font-size: 15px;
+	}
+}
+.Form-Item-Label.isMsg {
+	margin-top: 8px;
+	margin-bottom: auto;
+}
+@media screen and (max-width: 768px) {
+	.Form-Item-Label.isMsg {
+		margin-top: 0;
+	}
+}
+.Form-Item-Label-Required {
+	border-radius: 6px;
+	margin-right: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 48px;
+	display: inline-block;
+	text-align: center;
+	background: #3a4e73;
+	color: #fff;
+	font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+	.Form-Item-Label-Required {
+		border-radius: 4px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		width: 32px;
+		font-size: 10px;
+	}
+}
+.Form-Item-Input {
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin-left: 40px;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 48px;
+	flex: 1;
+	width: 100%;
+	max-width: 410px;
+	background: #eaedf2;
+	font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+	.Form-Item-Input {
+		margin-left: 0;
+		margin-top: 18px;
+		height: 40px;
+		flex: inherit;
+		font-size: 15px;
+	}
+}
+.Form-Item-Textarea {
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin-left: 40px;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 216px;
+	flex: 1;
+	width: 100%;
+	max-width: 410px;
+	background: #eaedf2;
+	font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+	.Form-Item-Textarea {
+		margin-top: 18px;
+		margin-left: 0;
+		height: 200px;
+		flex: inherit;
+		font-size: 15px;
+	}
+}
+.Form-Btn {
+	border-radius: 6px;
+	margin-top: 32px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 280px;
+	display: block;
+	letter-spacing: 0.05em;
+	background: #3a4e73;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+	.Form-Btn {
+		margin-top: 24px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		width: 160px;
+		font-size: 16px;
+	}
+}
+
+/* 会社概要 */
+dl {
+	padding: 3%;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+	dl {
+		font-size: 0.8rem;
+		font-weight: 400;
+	}
+
+	dl dd {
+		font-size: 0.8rem;
+	}
+}
+
+dl dt {
+	border-top: 1px solid #666666;
+	float: left;
+	width: 25%;
+	padding: 2% 0;
+}
+dl dd {
+	border-top: 1px solid #666666;
+	padding: 2% 0;
+	margin-left: 25%;
+}
+
+dl dt:first-child {
+	border-top: none;
+}
+
+dl dt:first-child + dd {
+	border-top: none;
+}
+
+/* フッター */
+footer {
+	width: 100%;
+	height: 15vh;
+	padding: 1% 10%;
+	text-align: center;
+	justify-content: space-around;
+	color: #fff;
+	background-color: #3a4e73;
+}
+
+@media screen and (max-width: 768px) {
+	footer {
+		padding: 1% 5%;
+	}
+}
+
+.footer-top {
+	display: flex;
+	height: 80%;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.footer-top h3 {
+	display: flex;
+	align-items: center;
+}
+
+.footer-right {
+	width: auto;
+	display: flex;
+	align-items: center;
+	text-align: left;
+	font-size: 0.8rem;
+}
+
+@media screen and (min-width: 769px) {
+	.footer-right ul {
+		display: flex;
+		justify-content: space-evenly;
+		margin: auto;
+	}
+
+	.footer-right ul li {
+		justify-content: space-between;
+		margin: auto;
+		border-right: 1px solid #fff;
+		padding: 0 20px;
+	}
+
+	.footer-right ul li:nth-child(4) {
+		border: 0px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.footer-right {
+		font-size: 0.5rem;
+	}
+
+	.footer-right ul li {
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 3px;
+	}
+}
+
+.footer-bottom {
+	height: 20%;
+	padding-bottom: 5px;
+	font-size: 0.5rem;
+}
+
+/* プライバシーポリシー */
+
+.header-policy {
+	background-color: #3a4e73;
+}
+
+.header-policy a,
+.header-policy #logo {
+	color: #fff;
+	text-shadow: 0px 0px 2px #fff;
+}
+
+.policy {
+	width: 80%;
+	justify-content: center;
+	margin: 50px auto;
+	padding: 30px 50px;
+	border-top: 2px solid #6b6b6b;
+	border-bottom: 2px solid #6b6b6b;
+	border-radius: 10px;
+}
+
+.policy h1 {
+	text-align: center;
+}
+
+.policy h2 {
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	.policy {
+		width: 90%;
+		padding: 30px 10px;
+	}
+	.policy h1 {
+		font-size: 25px;
+	}
+	.policy h2 {
+		font-size: 20px;
+		margin-top: 20px;
+		margin-bottom: 5px;
+	}
+
+	.policy p {
+		font-size: 10px;
+	}
+}

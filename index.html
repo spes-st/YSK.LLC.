@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>YSK合同会社</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- ヘッダー -->
+		<header>
+			<div id="navArea">
+				<h3 id="logo">YSK合同会社</h3>
+				<!-- ヘッダー/インナー -->
+				<nav id="nav">
+					<div class="menu">
+						<ul>
+							<li><a href="#">HOME</a></li>
+							<li><a href="#contents-about">SERVICES</a></li>
+							<li><a href="#Form">CONTACT</a></li>
+							<li><a href="#about">ABOUT</a></li>
+						</ul>
+					</div>
+				</nav>
+
+				<!-- ヘッダー/トグルボタン -->
+				<div class="burger">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+				</div>
+
+				<!-- バックグラウンド -->
+				<div id="mask"></div>
+			</div>
+
+			<!-- ヘッダー/ ヒーロー画面-->
+			<section>
+				<div class="hero">
+					<img src="images/hero.jpg" alt="hero-image" />
+					<h1 class="headline">小さな声を大きな声に</h1>
+				</div>
+			</section>
+		</header>
+		<!-- 背景の動き -->
+		<div class="slider"></div>
+
+		<!-- メイン -->
+		<main class="contents">
+			<!-- サービス -->
+			<div id="contents-about">
+				<h2>SERVICES</h2>
+				<h3>～サービス～</h3>
+				<p class="fade-In-effect">
+					建設業界は「段取り」が全てです。
+					一般個人様が抱える悩みである「どこの会社に依頼をしたらいいのか」「費用をなるべく抑えたい」を、豊富な経験と人脈を持ち合わせている弊社が解決します。
+					また、建設会社や一人親方、建設業従事者の技術指導まで弊社が請け負います。
+				</p>
+				<div id="services" class="fade-In-effect">
+					<div class="card fade-In-effect">
+						<img src="images/service-icon1.svg" alt="" />
+						<h4>短期駐車場手配代行</h4>
+					</div>
+					<div class="card fade-In-effect">
+						<img src="images/service-icon2.svg" alt="" />
+						<h4>道路使用許可申請サポート</h4>
+					</div>
+					<div class="card fade-In-effect">
+						<img src="images/service-icon3.svg" alt="" />
+
+						<h4>現場事務所手配</h4>
+					</div>
+					<div class="card fade-In-effect">
+						<img src="images/service-icon4.svg" alt="" />
+
+						<h4>資材置き場紹介</h4>
+					</div>
+					<div class="card fade-In-effect">
+						<img src="images/service-icon5.svg" alt="" />
+
+						<h4>用地仕入れサポート</h4>
+					</div>
+					<div class="card fade-In-effect">
+						<img src="images/service-icon6.svg" alt="" />
+
+						<h4>検査立ち合い</h4>
+					</div>
+				</div>
+			</div>
+			<!-- 会社の思い -->
+			<div class="detail">
+				<div class="detail-image fade-In-effect">
+					<img src="images/hero2-1" alt="" />
+				</div>
+				<div class="detail-text fade-In-effect">
+					<p>
+						現場の声を汲み取り<br />
+						頼って頂ける存在になるために<br />
+						日本のものづくりの最前線に。
+					</p>
+				</div>
+			</div>
+			<div class="detail">
+				<div class="detail-text fade-In-effect">
+					<p>
+						ニーズを的確に拾い上げ、<br />
+						最大限のコストパフォーマンスで<br />
+						サービスを提供
+					</p>
+				</div>
+				<div class="detail-image fade-In-effect">
+					<img src="images/hero2.jpeg" alt="" />
+				</div>
+			</div>
+		</main>
+
+		<!-- コンタクトフォーム -->
+		<div id="Form" class="fade-In-effect">
+			<h2>CONTACT</h2>
+			<h3>～お問い合わせ～</h3>
+			<div class="Form-Item">
+				<p class="Form-Item-Label">
+					<span class="Form-Item-Label-Required">必須</span>会社名
+				</p>
+				<input
+					type="text"
+					class="Form-Item-Input"
+					placeholder="例）株式会社令和"
+				/>
+			</div>
+			<div class="Form-Item">
+				<p class="Form-Item-Label">
+					<span class="Form-Item-Label-Required">必須</span>氏名
+				</p>
+				<input type="text" class="Form-Item-Input" placeholder="例）山田太郎" />
+			</div>
+			<div class="Form-Item">
+				<p class="Form-Item-Label">
+					<span class="Form-Item-Label-Required">必須</span>電話番号
+				</p>
+				<input
+					type="text"
+					class="Form-Item-Input"
+					placeholder="例）000-0000-0000"
+				/>
+			</div>
+			<div class="Form-Item">
+				<p class="Form-Item-Label">
+					<span class="Form-Item-Label-Required">必須</span>メールアドレス
+				</p>
+				<input
+					type="email"
+					class="Form-Item-Input"
+					placeholder="例）example@gmail.com"
+				/>
+			</div>
+			<div class="Form-Item">
+				<p class="Form-Item-Label isMsg">
+					<span class="Form-Item-Label-Required">必須</span>お問い合わせ内容
+				</p>
+				<textarea class="Form-Item-Textarea"></textarea>
+			</div>
+			<input type="submit" class="Form-Btn" value="送信する" />
+		</div>
+
+		<!-- 会社概要 -->
+		<div class="contents" id="about">
+			<h2>ABOUT</h2>
+			<h3>～会社概要～</h3>
+			<dl>
+				<dt>社名</dt>
+				<dd>YSK合同会社</dd>
+				<dt>住所</dt>
+				<dd>埼玉県川越市大字大袋新田446番地5</dd>
+				<dt>代表</dt>
+				<dd>貫井祐介</dd>
+				<dt>資本金</dt>
+				<dd>5,000,000円</dd>
+				<dt>免許</dt>
+				<dd>2級建築施工管理技士 管理番号：B222301445</dd>
+				<dt>業務内容</dt>
+				<dd>
+					・建設現場における技術指導及びマネジメント<br />
+					・建設業者の手配及び取次業務 ・施工プランニング代行業<br />
+					・広告業及び広告代理店業<br />
+				</dd>
+			</dl>
+		</div>
+
+		<footer>
+			<div class="footer-top">
+				<h3>YSK合同会社</h3>
+				<div class="footer-right">
+					<ul>
+						<li><a href="#navArea"> TOP </a></li>
+						<li>
+							<a href="#contents-about"> SERVICES </a>
+						</li>
+						<li>
+							<a href="#Form"> CONTACT </a>
+						</li>
+						<li>
+							<a href="privacypolicy.html"> プライバシーポリシー </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">© YSK LLC. All rights reserved.</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.1/dist/gsap.min.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.0.min.js"
+			integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+			crossorigin="anonymous"
+		></script>
+		<script src="app.js"></script>
+	</body>
+</html>
