@@ -1,219 +1,189 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 	<head>
+		<title>BLUE STYLE</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>YSK合同会社</title>
+		<link rel="shortcut icon" href="image/company_logo_reversi.png" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<!-- ヘッダー -->
-		<header>
-			<div id="navArea">
-				<h3 id="logo">YSK合同会社</h3>
-				<!-- ヘッダー/インナー -->
-				<nav id="nav">
-					<div class="menu">
-						<ul>
-							<li><a href="#">HOME</a></li>
-							<li><a href="#contents-about">SERVICES</a></li>
-							<li><a href="#Form">CONTACT</a></li>
-							<li><a href="#about">ABOUT</a></li>
-						</ul>
-					</div>
-				</nav>
-
-				<!-- ヘッダー/トグルボタン -->
-				<div class="burger">
-					<div class="line1"></div>
-					<div class="line2"></div>
-					<div class="line3"></div>
-				</div>
-
-				<!-- バックグラウンド -->
-				<div id="mask"></div>
+		<header class="header">
+			<div class="header-logo">
+				<img src="image/company_logo_reversi.png" alt="logo" />
+				<h1>BLUE STYLE</h1>
 			</div>
-
-			<!-- ヘッダー/ ヒーロー画面-->
-			<section>
-				<div class="hero">
-					<img src="images/hero.jpg" alt="hero-image" />
-					<h1 class="headline">小さな声を大きな声に</h1>
-				</div>
-			</section>
+			<nav class="header-nav">
+				<ul>
+					<li><a href="#main">Products</a></li>
+				</ul>
+			</nav>
 		</header>
-		<!-- 背景の動き -->
-		<div class="slider"></div>
-
-		<!-- メイン -->
-		<main class="contents">
-			<!-- サービス -->
-			<div id="contents-about">
-				<h2>SERVICES</h2>
-				<h3>～サービス～</h3>
-				<p class="fade-In-effect">
-					建設業界は「段取り」が全てです。
-					一般個人様が抱える悩みである「どこの会社に依頼をしたらいいのか」「費用をなるべく抑えたい」を、豊富な経験と人脈を持ち合わせている弊社が解決します。
-					また、建設会社や一人親方、建設業従事者の技術指導まで弊社が請け負います。
-				</p>
-				<div id="services" class="fade-In-effect">
-					<div class="card fade-In-effect">
-						<img src="images/service-icon1.svg" alt="" />
-						<h4>短期駐車場手配代行</h4>
-					</div>
-					<div class="card fade-In-effect">
-						<img src="images/service-icon2.svg" alt="" />
-						<h4>道路使用許可申請サポート</h4>
-					</div>
-					<div class="card fade-In-effect">
-						<img src="images/service-icon3.svg" alt="" />
-
-						<h4>現場事務所手配</h4>
-					</div>
-					<div class="card fade-In-effect">
-						<img src="images/service-icon4.svg" alt="" />
-
-						<h4>資材置き場紹介</h4>
-					</div>
-					<div class="card fade-In-effect">
-						<img src="images/service-icon5.svg" alt="" />
-
-						<h4>用地仕入れサポート</h4>
-					</div>
-					<div class="card fade-In-effect">
-						<img src="images/service-icon6.svg" alt="" />
-
-						<h4>検査立ち合い</h4>
-					</div>
-				</div>
-			</div>
-			<!-- 会社の思い -->
-			<div class="detail">
-				<div class="detail-image fade-In-effect">
-					<img src="images/hero2-1" alt="" />
-				</div>
-				<div class="detail-text fade-In-effect">
+		<section class="hero-image">
+			<video
+				id="video"
+				poster="img/movie.jpg"
+				webkit-playsinline
+				playsinline
+				muted
+				autoplay
+				loop
+			>
+				<source src="image/hero_image.mp4" type="video/mp4" />
+				<p>動画を再生できる環境ではありません。</p>
+			</video>
+		</section>
+		<div class="hero-text">
+			<h2>BLUE STYLE</h2>
+		</div>
+		<div class="hero-company">
+			<h2>COMPANY</h2>
+			<div class="hero-company-detail">
+				<img src="image/company_detail_transparent.png" alt="" />
+				<div class="detail-text">
+					<h3>~Style that Moves~</h3>
 					<p>
-						現場の声を汲み取り<br />
-						頼って頂ける存在になるために<br />
-						日本のものづくりの最前線に。
+						BLUE STYLEは自由なスタイルとリズム感で<br />
+						あなたのファッションに躍動感をもたらし、革新的な<br />
+						ストリートカルチャーをお届けします。
 					</p>
 				</div>
 			</div>
-			<div class="detail">
-				<div class="detail-text fade-In-effect">
-					<p>
-						ニーズを的確に拾い上げ、<br />
-						最大限のコストパフォーマンスで<br />
-						サービスを提供
-					</p>
+		</div>
+		<main id="main">
+			<h2>Products</h2>
+			<div class="product-list">
+				<div class="product-item">
+					<img src="image/product_clothing1.png" alt="商品1" />
+					<div class="product-right">
+						<h3>
+							Supreme <br />
+							Box Logo Crewneck "Black"
+						</h3>
+						<p>SIZE： L</p>
+						<p>PRICE：45,090円</p>
+						<a href="#form" class="purchase-button">BUY NOW</a>
+					</div>
 				</div>
-				<div class="detail-image fade-In-effect">
-					<img src="images/hero2.jpeg" alt="" />
+				<div class="product-item">
+					<img src="image/product_clothing2.png" alt="商品2" />
+					<div class="product-right">
+						<h3>
+							SNKRDUNK collaboration <br />
+							with #FR2 Pot-man Hoodie "Green"
+						</h3>
+						<p>SIZE： L</p>
+						<p>PRICE：39,800円</p>
+						<a href="#form" class="purchase-button">BUY NOW</a>
+					</div>
+				</div>
+				<div class="product-item">
+					<img src="image/product_clothing3.png" alt="商品3" />
+					<div class="product-right">
+						<h3>
+							BALENCIAGA <br />
+							RainbowLogo T-shirt
+						</h3>
+						<p>SIZE： S</p>
+						<p>PRICE：37,800円</p>
+						<a href="#form" class="purchase-button">BUY NOW</a>
+					</div>
+				</div>
+				<div class="product-item">
+					<img src="image/product_clothing4.png" alt="商品4" />
+					<div class="product-right">
+						<h3>
+							OFF-WHITE Impressionism <br />
+							Diag Stencil Sweatshirt "White"
+						</h3>
+						<p>SIZE： M</p>
+						<p>PRICE：40,120円</p>
+						<a href="#form" class="purchase-button">BUY NOW</a>
+					</div>
 				</div>
 			</div>
 		</main>
-
-		<!-- コンタクトフォーム -->
-		<div id="Form" class="fade-In-effect">
-			<h2>CONTACT</h2>
-			<h3>～お問い合わせ～</h3>
-			<div class="Form-Item">
-				<p class="Form-Item-Label">
-					<span class="Form-Item-Label-Required">必須</span>会社名
-				</p>
+		<section id="form">
+			<h2>お問い合わせ・購入フォーム</h2>
+			<form action="https://api.staticforms.xyz/submit" method="post">
 				<input
-					type="text"
-					class="Form-Item-Input"
-					placeholder="例）株式会社令和"
+					type="hidden"
+					name="accessKey"
+					value="3b6c3a1f-ffeb-4693-b6c1-17ee63b3500e"
 				/>
-			</div>
-			<div class="Form-Item">
-				<p class="Form-Item-Label">
-					<span class="Form-Item-Label-Required">必須</span>氏名
-				</p>
-				<input type="text" class="Form-Item-Input" placeholder="例）山田太郎" />
-			</div>
-			<div class="Form-Item">
-				<p class="Form-Item-Label">
-					<span class="Form-Item-Label-Required">必須</span>電話番号
-				</p>
-				<input
-					type="text"
-					class="Form-Item-Input"
-					placeholder="例）000-0000-0000"
-				/>
-			</div>
-			<div class="Form-Item">
-				<p class="Form-Item-Label">
-					<span class="Form-Item-Label-Required">必須</span>メールアドレス
-				</p>
-				<input
-					type="email"
-					class="Form-Item-Input"
-					placeholder="例）example@gmail.com"
-				/>
-			</div>
-			<div class="Form-Item">
-				<p class="Form-Item-Label isMsg">
-					<span class="Form-Item-Label-Required">必須</span>お問い合わせ内容
-				</p>
-				<textarea class="Form-Item-Textarea"></textarea>
-			</div>
-			<input type="submit" class="Form-Btn" value="送信する" />
-		</div>
-
-		<!-- 会社概要 -->
-		<div class="contents" id="about">
-			<h2>ABOUT</h2>
-			<h3>～会社概要～</h3>
+				<!-- Required -->
+				<div>
+					<label for="name">名前<span class="required">（必須）</span></label>
+					<input type="text" id="name" name="name" required />
+				</div>
+				<div>
+					<label for="furigana"
+						>フリガナ<span class="required">（必須）</span></label
+					>
+					<input type="text" id="furigana" name="furigana" required />
+				</div>
+				<div>
+					<label for="postal-code"
+						>郵便番号<span class="required">（必須）</span></label
+					>
+					<input type="text" id="postal-code" name="postal-code" required />
+				</div>
+				<div>
+					<label for="address"
+						>住所<span class="required">（必須）</span></label
+					>
+					<input type="text" id="address" name="address" required />
+				</div>
+				<div>
+					<label for="email"
+						>メールアドレス<span class="required">（必須）</span></label
+					>
+					<input type="email" id="email" name="email" required />
+				</div>
+				<div>
+					<label for="phone"
+						>商品番号<span class="required"
+							><br />（購入したい商品番号を入力してください。無い場合は無しと入力してください。）</span
+						></label
+					>
+					<input type="tel" id="phone" name="number" required />
+				</div>
+				<div>
+					<label for="inquiry">お問い合わせ内容：</label>
+					<textarea id="message" name="message" required></textarea>
+				</div>
+				<div>
+					<button type="submit" class="btn-purchase">送信</button>
+				</div>
+			</form>
+		</section>
+		<div class="company-profile">
+			<h2>会社概要</h2>
 			<dl>
 				<dt>社名</dt>
-				<dd>YSK合同会社</dd>
-				<dt>住所</dt>
-				<dd>埼玉県川越市大字大袋新田446番地5</dd>
-				<dt>代表</dt>
-				<dd>貫井祐介</dd>
-				<dt>資本金</dt>
-				<dd>5,000,000円</dd>
-				<dt>免許</dt>
-				<dd>2級建築施工管理技士 管理番号：B222301445</dd>
-				<dt>業務内容</dt>
-				<dd>
-					・建設現場における技術指導及びマネジメント<br />
-					・建設業者の手配及び取次業務 ・施工プランニング代行業<br />
-					・広告業及び広告代理店業<br />
-				</dd>
+				<dd>合同会社BLUE</dd>
+				<dt>所在地</dt>
+				<dd>大阪市天神橋7丁目13番地9セレーナコンフォルト天神橋302号室</dd>
+				<dt>電話番号</dt>
+				<dd>06-7777-0692</dd>
+				<dt>代表取締役</dt>
+				<dd>中村　勇亮</dd>
+				<dt>事業内容</dt>
+				<dd>古着販売 中古アクセサリー・鞄・靴の販売</dd>
 			</dl>
 		</div>
 
-		<footer>
-			<div class="footer-top">
-				<h3>YSK合同会社</h3>
-				<div class="footer-right">
-					<ul>
-						<li><a href="#navArea"> TOP </a></li>
-						<li>
-							<a href="#contents-about"> SERVICES </a>
-						</li>
-						<li>
-							<a href="#Form"> CONTACT </a>
-						</li>
-						<li>
-							<a href="privacypolicy.html"> プライバシーポリシー </a>
-						</li>
-					</ul>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<p class="company-name">合同会社BLUE</p>
+					<p class="copy-right">© 2023 合同会社BLUE. All Rights Reserved.</p>
+					<div class="footer-right">
+						<p><a href="privacypolicy.html">プライバシーポリシー</a></p>
+						<p><a href="tokushoho.html">特定商取引法に基づく表示</a></p>
+					</div>
 				</div>
 			</div>
-			<div class="footer-bottom">© YSK LLC. All rights reserved.</div>
 		</footer>
-
-		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.1/dist/gsap.min.js"></script>
-		<script
-			src="https://code.jquery.com/jquery-3.7.0.min.js"
-			integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-			crossorigin="anonymous"
-		></script>
-		<script src="app.js"></script>
 	</body>
 </html>
